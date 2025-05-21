@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Optimizing Next.js Applications for Core Web Vitals",
+    "img": "img/news/nextjs-optimization.jpg",
+    "category": "Web Performance",
+    "date": { "date": "15", "month": "Nov" },
+    "details": [
+      "In modern web development, achieving high Core Web Vitals scores is crucial for both user experience and SEO. Through my work at jobfree.dev, I've implemented several key strategies including dynamic imports, image optimization with next/image, and server-side rendering configurations.",
+      "A recent case study showed that optimizing a client's Next.js e-commerce site improved their LCP by 58% and reduced CLS to near-zero. This was achieved through careful chunk splitting, font preloading, and removing unused JavaScript.",
+      "The most impactful changes often come from understanding the rendering lifecycle. Implementing React.memo for component memoization and strategic use of useCallback hooks can reduce unnecessary re-renders by up to 40% in complex applications."
+    ]
+  },
+  {
+    "title": "Building Accessible React Components with WAI-ARIA",
+    "img": "img/news/react-accessibility.jpg",
+    "category": "Frontend Development",
+    "date": { "date": "28", "month": "Oct" },
+    "details": [
+      "Accessibility isn't just compliance - it's about creating inclusive digital experiences. In my recent projects, I've focused on implementing proper keyboard navigation, screen reader announcements, and high-contrast modes for React applications.",
+      "One effective pattern is creating an accessibility wrapper component that handles focus management and ARIA attributes. This approach reduced our a11y-related bugs by 75% across multiple projects while maintaining component reusability.",
+      "Testing with tools like axe-core and VoiceOver revealed surprising insights. For instance, properly labeling interactive elements and providing status messages can improve the experience for all users, not just those using assistive technologies."
+    ]
+  },
+  {
+    "title": "Migrating from WordPress to Headless Next.js: A Case Study",
+    "img": "img/news/headless-wordpress.jpg",
+    "category": "Architecture",
+    "date": { "date": "5", "month": "Oct" },
+    "details": [
+      "The India Index project presented an interesting challenge: migrate a WordPress site with 10,000+ entries to a performant Next.js frontend while maintaining all existing functionality. Using WordPress as a headless CMS with GraphQL proved to be the perfect solution.",
+      "Key technical decisions included implementing incremental static regeneration (ISR) for dynamic content, creating custom Meilisearch integrations for fuzzy search, and developing a caching strategy that reduced API calls by 90%.",
+      "The results were transformative - page load times decreased from 4.2s to 0.8s, and the React frontend allowed for much richer interactive features while maintaining all the content management benefits of WordPress."
+    ]
+  }
+]

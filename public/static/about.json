@@ -1,0 +1,17 @@
+{
+  "skill": "React/Next.js Developer",
+  "title": "I Build Modern, Scalable Web Experiences",
+  "bio": "Hi! I'm Jobanpreet Singh, a passionate frontend developer specializing in React and Next.js. With expertise in performance optimization and modern JavaScript, I create fast, accessible web applications that deliver exceptional user experiences. My focus is on clean code architecture and efficient development workflows.",
+  "totalProjects": 15,
+  "experience": 1.5,
+  "techStack": [
+    "React.js",
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Node.js",
+    "Firebase"
+  ],
+  "freelanceBrand": "jobfree.dev",
+  "location": "Brampton, Ontario, Canada"
+}

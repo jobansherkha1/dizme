@@ -1,0 +1,60 @@
+{
+  "name": "Jobanpreet Singh",
+  "address": "Brampton, Ontario",
+  "bio": "I specialize in building modern, fast, and scalable websites using React, Next.js, and Tailwind CSS. Currently building smart tools and platforms at Jobfree.dev.",
+  "mainSkill": "Frontend Developer (React / Next.js)",
+  "img": "/img/slider/avatar.png",
+  "skills": [
+    {
+      "name": "React.js",
+      "value": 95
+    },
+    {
+      "name": "Next.js",
+      "value": 90
+    },
+    {
+      "name": "TypeScript",
+      "value": 85
+    },
+    {
+      "name": "Tailwind CSS",
+      "value": 90
+    },
+    {
+      "name": "Node.js",
+      "value": 75
+    },
+    {
+      "name": "MongoDB",
+      "value": 70
+    }
+  ],
+  "social": [
+    {
+      "name": "facebook",
+      "icon": "icon-facebook-1",
+      "url": "#"
+    },
+    {
+      "name": "twitter",
+      "icon": "icon-twitter-1",
+      "url": "#"
+    },
+    {
+      "name": "linkedin",
+      "icon": "icon-linkedin-1",
+      "url": "#"
+    },
+    {
+      "name": "behance",
+      "icon": "icon-behance",
+      "url": "#"
+    }
+  ],
+  "contact": {
+    "address": "Brampton, Ontario, Canada",
+    "email": "joban@jobfree.dev",
+    "phn": "+1 437-248-7545"
+  }
+}

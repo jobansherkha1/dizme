@@ -1,0 +1,28 @@
+{
+  "..\\node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
+    "id": 5217,
+    "files": [
+      "static/chunks/217.eb182d7ebb400e71.js"
+    ]
+  },
+  "..\\node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
+    "id": 8857,
+    "files": [
+      "static/chunks/857.7f48826182603376.js"
+    ]
+  },
+  "index-dark.js -> ../src/components/Portfolio": {
+    "id": 9635,
+    "files": [
+      "static/chunks/391.bb0545738a2a81f5.js",
+      "static/chunks/635.b27491ecdb8dc5e2.js"
+    ]
+  },
+  "index.js -> ../src/components/Portfolio": {
+    "id": 9635,
+    "files": [
+      "static/chunks/391.bb0545738a2a81f5.js",
+      "static/chunks/635.b27491ecdb8dc5e2.js"
+    ]
+  }
+}
