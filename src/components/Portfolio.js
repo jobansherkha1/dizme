@@ -16,7 +16,6 @@ const Portfolio = () => {
     setTimeout(() => {
       isotope.current = new Isotope(".gallery_zoom", {
         itemSelector: ".grid-item",
-        //    layoutMode: "fitRows",
         percentPosition: true,
         masonry: {
           columnWidth: ".grid-item",
@@ -42,213 +41,188 @@ const Portfolio = () => {
   };
   const activeBtn = (value) => (value === filterKey ? "current" : "");
 
-  // Popup
   const [popup, setPopup] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const filters = [
+    { label: "All", value: "*" },
+    { label: "Product Platforms", value: "web-apps" },
+    { label: "Design Systems", value: "design-systems" },
+    { label: "Headless CMS", value: "headless" },
+    { label: "Marketing Sites", value: "marketing" },
+  ];
+
+  const projects = [
+    {
+      title: "Jobfree.dev Talent Platform",
+      category: "Product Platform",
+      filter: "web-apps",
+      image: "img/portfolio/portf.png",
+      cover: "img/portfolio/portf.png",
+      description: [
+        "Led the end-to-end build of Jobfree.dev’s hiring workspace using Next.js 13, Supabase, and Tailwind CSS.",
+        "Delivered real-time candidate pipelines, AI-assisted resume summaries, and a design system that keeps the experience consistent across tenants.",
+      ],
+      details: [
+        { label: "Client", value: "Jobfree.dev" },
+        { label: "Role", value: "Lead Frontend Engineer" },
+        { label: "Stack", value: "Next.js 13, Supabase, Tailwind CSS" },
+        { label: "Timeline", value: "2023 – Present" },
+        {
+          label: "Link",
+          value: "https://jobfree.dev",
+          linkLabel: "jobfree.dev",
+          isLink: true,
+        },
+      ],
+      gallery: ["img/portfolio/12.png", "img/portfolio/13.png", "img/portfolio/14.png"],
+    },
+    {
+      title: "India Index Research Portal",
+      category: "Headless CMS",
+      filter: "headless",
+      image: "img/portfolio/nshop.png",
+      cover: "img/portfolio/nshop.png",
+      description: [
+        "Migrated a 10k+ entry WordPress site to a headless Next.js experience backed by WPGraphQL and Meilisearch.",
+        "Implemented ISR, advanced search, and localization while reducing initial page load from 4.2s to 0.8s.",
+      ],
+      details: [
+        { label: "Client", value: "The India Index" },
+        { label: "Role", value: "Frontend Consultant" },
+        { label: "Stack", value: "Next.js, WPGraphQL, Meilisearch" },
+        { label: "Timeline", value: "2022" },
+      ],
+      gallery: ["img/portfolio/10.jpg", "img/portfolio/11.jpg", "img/portfolio/9.png"],
+    },
+    {
+      title: "Uplift Design System",
+      category: "Design Systems",
+      filter: "design-systems",
+      image: "img/portfolio/tech.png",
+      cover: "img/portfolio/tech.png",
+      description: [
+        "Crafted a reusable component library for a fintech team with Storybook, Radix UI, and Tailwind CSS.",
+        "Documented accessibility patterns, theming tokens, and automated visual regression testing to keep releases stable.",
+      ],
+      details: [
+        { label: "Client", value: "Confidential Fintech" },
+        { label: "Role", value: "UI Engineer" },
+        { label: "Stack", value: "Storybook, Radix UI, Tailwind CSS" },
+        { label: "Timeline", value: "2023" },
+      ],
+      gallery: ["img/portfolio/7.jpg", "img/portfolio/8.jpg", "img/portfolio/6.jpg"],
+    },
+    {
+      title: "Northstar Analytics Dashboard",
+      category: "Product Platform",
+      filter: "web-apps",
+      image: "img/portfolio/14.png",
+      cover: "img/portfolio/14.png",
+      description: [
+        "Built a data-rich analytics dashboard with dynamic filters, offline caching, and exportable insights.",
+        "Introduced Zustand state management, chart virtualization, and testing pipelines that cut regression bugs by 60%.",
+      ],
+      details: [
+        { label: "Client", value: "Northstar Insights" },
+        { label: "Role", value: "Senior Frontend Developer" },
+        { label: "Stack", value: "React, Zustand, Chart.js" },
+        { label: "Timeline", value: "2021 – 2022" },
+      ],
+      gallery: ["img/portfolio/5.jpg", "img/portfolio/4.jpg", "img/portfolio/3.jpg"],
+    },
+    {
+      title: "Lighthouse Clinics Marketing Site",
+      category: "Marketing Site",
+      filter: "marketing",
+      image: "img/portfolio/ecomme.png",
+      cover: "img/portfolio/ecomme.png",
+      description: [
+        "Designed and developed a conversion-focused marketing site with Next.js, Sanity CMS, and localized content blocks.",
+        "Implemented A/B testing hooks and analytics dashboards that improved sign-up conversion by 28%.",
+      ],
+      details: [
+        { label: "Client", value: "Lighthouse Clinics" },
+        { label: "Role", value: "Frontend Developer" },
+        { label: "Stack", value: "Next.js, Sanity CMS, Tailwind CSS" },
+        { label: "Timeline", value: "2021" },
+        {
+          label: "Link",
+          value: "https://lighthouseclinics.com",
+          linkLabel: "lighthouseclinics.com",
+          isLink: true,
+        },
+      ],
+      gallery: ["img/portfolio/1.jpg", "img/portfolio/2.jpg", "img/portfolio/4.jpg"],
+    },
+  ];
+
+  const openProject = (project) => {
+    setSelectedProject(project);
+    setPopup(true);
+  };
 
   return (
     <div className="dizme_tm_section" id="portfolio">
-      <DetailsPopup open={popup} close={() => setPopup(false)} />
+      <DetailsPopup
+        open={popup}
+        data={selectedProject}
+        close={() => setPopup(false)}
+      />
       <div className="dizme_tm_portfolio">
         <div className="container">
           <div className="dizme_tm_main_title" data-align="center">
             <span>Portfolio</span>
-            <h3>My Amazing Works</h3>
+            <h3>Selected Projects & Case Studies</h3>
             <p>
-              Most common methods for designing websites that work well on
-              desktop is responsive and adaptive design
+              A snapshot of products, systems, and marketing sites I&apos;ve crafted
+              for startups and growth teams.
             </p>
           </div>
           <div className="portfolio_filter">
             <ul>
-              <li>
-                <a
-                  className={`c-pointer ${activeBtn("*")}`}
-                  onClick={handleFilterKeyChange("*")}
-                >
-                  All
-                </a>
-              </li>
-              <li>
-                <a
-                  className={`c-pointer ${activeBtn("youtube")}`}
-                  onClick={handleFilterKeyChange("youtube")}
-                >
-                  Youtube
-                </a>
-              </li>
-              <li>
-                <a
-                  className={`c-pointer ${activeBtn("vimeo")}`}
-                  onClick={handleFilterKeyChange("vimeo")}
-                >
-                  Vimeo
-                </a>
-              </li>
-              <li>
-                <a
-                  className={`c-pointer ${activeBtn("soundcloud")}`}
-                  onClick={handleFilterKeyChange("soundcloud")}
-                >
-                  Soundcloud
-                </a>
-              </li>
-              <li>
-                <a
-                  className={`c-pointer ${activeBtn("popup")}`}
-                  onClick={handleFilterKeyChange("popup")}
-                >
-                  Popup
-                </a>
-              </li>
-              <li>
-                <a
-                  className={`c-pointer  ${activeBtn("detail")}`}
-                  onClick={handleFilterKeyChange("detail")}
-                >
-                  Detail
-                </a>
-              </li>
+              {filters.map((item) => (
+                <li key={item.value}>
+                  <a
+                    className={`c-pointer ${activeBtn(item.value)}`}
+                    onClick={handleFilterKeyChange(item.value)}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="dizme_tm_portfolio_titles" />
           <div className="portfolio_list wow fadeInUp" data-wow-duration="1s">
             <ul className="gallery_zoom grid">
-              <li className="youtube grid-item">
-                <div className="inner">
-                  <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Mockup Shape"
-                    data-category="Youtube"
-                  >
-                    <a
-                      className="popup-youtube"
-                      href="https://www.youtube.com/embed/7e90gBu4pas?autoplay=1"
+              {projects.map((project, index) => (
+                <li className={`${project.filter} grid-item`} key={index}>
+                  <div className="inner">
+                    <div
+                      className="entry dizme_tm_portfolio_animation_wrap"
+                      data-title={project.title}
+                      data-category={project.category}
                     >
-                      <img src="img/thumbs/42-56.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/portf.png"
-                      />
-                    </a>
+                      <a
+                        className="portfolio_popup"
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          openProject(project);
+                        }}
+                      >
+                        <img src="img/thumbs/42-56.jpg" alt={`${project.title} thumbnail`} />
+                        <div className="main" data-img-url={project.image} />
+                      </a>
+                    </div>
+                    <div className="mobile_title">
+                      <h3>{project.title}</h3>
+                      <span>{project.category}</span>
+                    </div>
                   </div>
-                  <div className="mobile_title">
-                    <h3>Mockup Shape</h3>
-                    <span>Youtube</span>
-                  </div>
-                </div>
-              </li>
-              <li className="vimeo grid-item">
-                <div className="inner">
-                  <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Ave Bottle"
-                    data-category="Vimeo"
-                  >
-                    <a
-                      className="popup-vimeo"
-                      href="https://player.vimeo.com/video/337293658?autoplay=1"
-                    >
-                      <img src="img/thumbs/42-34.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/10.jpg"
-                      />
-                    </a>
-                  </div>
-                  <div className="mobile_title">
-                    <h3>Ave Bottle</h3>
-                    <span>Vimeo</span>
-                  </div>
-                </div>
-              </li>
-              <li className="soundcloud grid-item">
-                <div className="inner">
-                  <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Magic Art"
-                    data-category="Soundcloud"
-                  >
-                    <a
-                      className="soundcloude_link mfp-iframe audio"
-                      href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/471954807&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-                    >
-                      <img src="img/thumbs/42-56.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/11.jpg"
-                      />
-                    </a>
-                  </div>
-                  <div className="mobile_title">
-                    <h3>Magic Art</h3>
-                    <span>Soundcloud</span>
-                  </div>
-                </div>
-              </li>
-              <li className="popup grid-item">
-                <div className="inner">
-                  <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Scott Felix"
-                    data-category="Popup"
-                  >
-                    <a className="zoom" href="img/portfolio/5.jpg">
-                      <img src="img/thumbs/42-56.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/nshop.png"
-                      />
-                    </a>
-                  </div>
-                  <div className="mobile_title">
-                    <h3>Blue Lemon</h3>
-                    <span>Popup</span>
-                  </div>
-                </div>
-              </li>
-              <li className="popup grid-item">
-                <div className="inner">
-                  <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Art Stone"
-                    data-category="Popup"
-                  >
-                    <a className="zoom" href="img/portfolio/4.jpg">
-                      <img src="img/thumbs/42-34.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/tech.png"
-                      />
-                    </a>
-                  </div>
-                  <div className="mobile_title">
-                    <h3>Art Stone</h3>
-                    <span>Popup</span>
-                  </div>
-                </div>
-              </li>
-
-              <li className="detail grid-item" onClick={() => setPopup(true)}>
-                <div className="inner">
-                  <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
-                    data-title="Global Evolution"
-                    data-category="Detail"
-                  >
-                    <a className="portfolio_popup" href="#">
-                      <img src="img/thumbs/42-34.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/6.jpg"
-                      />
-                    </a>
-                  </div>
-                  <div className="mobile_title">
-                    <h3>Global Evolution</h3>
-                    <span>Detail</span>
-                  </div>
-                </div>
-              </li>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

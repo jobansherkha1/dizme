@@ -1,8 +1,8 @@
 {
   "name": "Jobanpreet Singh",
-  "address": "Brampton, Ontario",
-  "bio": "I specialize in building modern, fast, and scalable websites using React, Next.js, and Tailwind CSS. Currently building smart tools and platforms at Jobfree.dev.",
-  "mainSkill": "Frontend Developer (React / Next.js)",
+  "address": "Brampton, Ontario, Canada",
+  "bio": "Frontend engineer crafting fast, accessible, and maintainable web apps with React, Next.js, and TypeScript. Currently building smart tools at Jobfree.dev and collaborating with teams across North America.",
+  "mainSkill": "Frontend Developer & UI Engineer",
   "img": "/img/slider/avatar.png",
   "skills": [
     {
@@ -32,29 +32,29 @@
   ],
   "social": [
     {
-      "name": "facebook",
-      "icon": "icon-facebook-1",
-      "url": "#"
+      "name": "GitHub",
+      "icon": "icon-github-circled",
+      "url": "https://github.com/jobansingh"
     },
     {
-      "name": "twitter",
-      "icon": "icon-twitter-1",
-      "url": "#"
-    },
-    {
-      "name": "linkedin",
+      "name": "LinkedIn",
       "icon": "icon-linkedin-1",
-      "url": "#"
+      "url": "https://www.linkedin.com/in/jobansingh/"
     },
     {
-      "name": "behance",
-      "icon": "icon-behance",
-      "url": "#"
+      "name": "Twitter",
+      "icon": "icon-twitter-1",
+      "url": "https://twitter.com/jobansingh_"
+    },
+    {
+      "name": "Dev.to",
+      "icon": "icon-book-open",
+      "url": "https://dev.to/jobansingh"
     }
   ],
   "contact": {
     "address": "Brampton, Ontario, Canada",
-    "email": "joban@jobfree.dev",
+    "email": "hello@jobansingh.dev",
     "phn": "+1 437-248-7545"
   }
 }

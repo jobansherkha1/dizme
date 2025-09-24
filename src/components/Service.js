@@ -1,13 +1,12 @@
 import parse from "html-react-parser";
 import { useEffect, useState } from "react";
-import { fatchData } from "../utilits";
 import ServicePopup from "./popup/ServicePopup";
 
 const Service = ({ dark }) => {
-  const [data, setData] = useState([
+  const services = [
     {
       title: "React/Next.js Development",
-      shortDec: "Building performant, SEO-friendly web applications with modern React ecosystem.",
+      shortDec: "Ship production-ready interfaces powered by Next.js, React Server Components, and modern tooling.",
       price: "45",
       icon: {
         svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#61DAFB" d="M12 12.765l5.592-9.437h-3.276L12 7.33v.002L9.688 3.328h-3.28z"/><path fill="#61DAFB" d="M18.461 3.332L12 14.235l-1.688-2.828-2.735-4.62h-5.9l7.328 12.345 5.592-9.438 1.068-1.724 2.722-4.585z"/></svg>`,
@@ -16,15 +15,15 @@ const Service = ({ dark }) => {
       },
       fullDec: `<p>Custom React and Next.js solutions including:</p>
                 <ul>
-                  <li>SSR/SSG implementation</li>
-                  <li>Performance optimization (Lighthouse 90+)</li>
-                  <li>State management (Redux/Context API)</li>
-                  <li>API integrations (REST/GraphQL)</li>
+                  <li>SSR/SSG/ISR strategies tailored to your content model</li>
+                  <li>Design system implementation with Storybook + Tailwind</li>
+                  <li>State management with Redux Toolkit, Zustand, or Context</li>
+                  <li>API integrations across REST, GraphQL, and Firebase</li>
                 </ul>`
     },
     {
       title: "Frontend Optimization",
-      shortDec: "Improving load times, accessibility (WCAG), and Core Web Vitals.",
+      shortDec: "Improve Lighthouse scores, accessibility, and conversion across the entire funnel.",
       price: "35",
       icon: {
         svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#06B6D4" d="M12 12.765l5.592-9.437h-3.276L12 7.33v.002L9.688 3.328h-3.28z"/><path fill="#06B6D4" d="M18.461 3.332L12 14.235l-1.688-2.828-2.735-4.62h-5.9l7.328 12.345 5.592-9.438 1.068-1.724 2.722-4.585z"/></svg>`,
@@ -33,15 +32,15 @@ const Service = ({ dark }) => {
       },
       fullDec: `<p>Comprehensive performance tuning:</p>
                 <ul>
-                  <li>Lighthouse audits & fixes</li>
-                  <li>Tailwind CSS optimization</li>
-                  <li>Bundle size reduction</li>
-                  <li>AODA/WCAG compliance</li>
+                  <li>Lighthouse & Core Web Vitals audits and remediation</li>
+                  <li>Tailwind CSS & webpack/Vite bundle optimizations</li>
+                  <li>Accessibility reviews (WCAG 2.1 AA) with actionable fixes</li>
+                  <li>Experiment tracking and analytics instrumentation</li>
                 </ul>`
     },
     {
       title: "WordPress Customization",
-      shortDec: "Custom plugins (LearnDash/Tutor LMS) and theme development.",
+      shortDec: "Extend or migrate WordPress with modern tooling and headless architectures.",
       price: "30",
       icon: {
         svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#21759B" d="M12 12.765l5.592-9.437h-3.276L12 7.33v.002L9.688 3.328h-3.28z"/><path fill="#21759B" d="M18.461 3.332L12 14.235l-1.688-2.828-2.735-4.62h-5.9l7.328 12.345 5.592-9.438 1.068-1.724 2.722-4.585z"/></svg>`,
@@ -50,13 +49,13 @@ const Service = ({ dark }) => {
       },
       fullDec: `<p>WordPress expertise including:</p>
                 <ul>
-                  <li>LMS plugin customization</li>
-                  <li>Gutenberg block development</li>
-                  <li>Headless WordPress with React</li>
-                  <li>Plugin security hardening</li>
+                  <li>LMS plugin customization (LearnDash, Tutor LMS)</li>
+                  <li>Custom Gutenberg blocks + Advanced Custom Fields</li>
+                  <li>Headless WordPress with Next.js & GraphQL</li>
+                  <li>Plugin security, caching, and deployment automation</li>
                 </ul>`
     }
-  ]);
+  ];
 
   const [popupdata, setPopupdata] = useState({});
   const [popup, setPopup] = useState(false);
@@ -73,7 +72,7 @@ const Service = ({ dark }) => {
 
   const onClick = (index) => {
     setPopup(true);
-    setPopupdata(data[index]);
+    setPopupdata(services[index]);
   };
 
   return (
@@ -93,7 +92,7 @@ const Service = ({ dark }) => {
           
           <div className="service_list">
             <ul>
-              {data.map((service, i) => (
+              {services.map((service, i) => (
                 <li
                   className={`wow ${i % 2 === 0 ? "fadeInLeft" : "fadeInRight"}`}
                   data-wow-duration="1s"

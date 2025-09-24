@@ -1,4 +1,6 @@
 {
   "extends": "next/core-web-vitals",
-  "react/no-find-dom-node": "off"
+  "rules": {
+    "react/no-find-dom-node": "off"
+  }
 }

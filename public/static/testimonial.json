@@ -1,20 +1,20 @@
 [
   {
-    "name": "Mike Anderson",
+    "name": "Neha Patel",
     "img": "img/testimonials/4.jpg",
-    "profession": "Vivaco Studio",
-    "details": "I rarely like to write reviews, but the Marketify team truly deserve a standing ovation for their customer support, customisation and most importantly, friendliness and professionalism. Many thanks once again for everything and hope that I get to deal with you again in the near future."
+    "profession": "Head of Product, Jobfree.dev",
+    "details": "Joban turned our raw ideas into a polished talent platform that teams actually enjoy using. He guides us through technical trade-offs, prototypes quickly, and always comes prepared with thoughtful suggestions for the user experience."
   },
   {
-    "name": "Keita Smith",
+    "name": "Ethan Miller",
     "img": "img/testimonials/3.jpg",
-    "profession": "ABC Group",
-    "details": "Really the Code Quality, Customer Support, and design are awesome and its good support they are giving. They give an instant solution to our needs. Really awesome. I will strongly recommend to my friends. Simply amazing team and amazing theme! Thank you from United States of America!"
+    "profession": "Founder, Northstar Insights",
+    "details": "From the first sprint, Joban embedded himself with our analysts and translated their workflows into a fast, reliable dashboard. His attention to accessibility and testing dramatically reduced bugs and improved stakeholder trust."
   },
   {
-    "name": "Alan Walker",
+    "name": "Sara Al-Khalid",
     "img": "img/testimonials/6.jpg",
-    "profession": "Web Designer",
-    "details": "Loved the template design, documentation, customizability and the customer support from Marketify team! I am a noob in programming with very little knowledge about coding but the Marketify team helped me to launch my resume website successfully. Much recommended!"
+    "profession": "Marketing Lead, Lighthouse Clinics",
+    "details": "Our new marketing site launched ahead of schedule and sign-ups jumped almost immediately. Joban gave us a maintainable CMS setup, automated reports, and clear documentation so our team can move quickly without breaking things."
   }
 ]

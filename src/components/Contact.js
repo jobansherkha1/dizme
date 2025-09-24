@@ -11,10 +11,11 @@ const Contact = () => {
         <div className="container">
           <div className="dizme_tm_main_title" data-align="center">
             <span>Contact Me</span>
-            <h3>I Want To Hear From You</h3>
+            <h3>Let&apos;s Build Something Great</h3>
             <p>
-              Please fill out the form on this section to contact with me. Or
-              call between 9:00 a.m. and 8:00 p.m. ET, Monday through Friday
+              Share a bit about your project, timeline, and goals. I typically
+              respond within one business day and collaborate with teams across
+              North America (EST).
             </p>
           </div>
           <div className="contact_inner">
@@ -40,7 +41,9 @@ const Contact = () => {
                       <div className="short">
                         <h3>Email</h3>
                         <span>
-                          <a href="#">{data.contact.email}</a>
+                          <a href={`mailto:${data.contact.email}`}>
+                            {data.contact.email}
+                          </a>
                         </span>
                       </div>
                     </div>
@@ -125,7 +128,7 @@ const Contact = () => {
                   height={375}
                   style={{ width: "100%" }}
                   id="gmap_canvas"
-                  src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Brampton%2C%20Ontario&t=&z=11&ie=UTF8&iwloc=&output=embed"
                 />
                 <a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon" />
                 <br />

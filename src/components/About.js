@@ -12,7 +12,7 @@ const About = ({ dark }) => {
                 <div className="numbers year">
                   <div className="wrapper">
                     <h3>
-                      <Counter end={1.5} decimals={1} />
+                      <Counter end={4.5} decimals={1} />
                     </h3>
                     <span className="name">
                       Years of
@@ -24,7 +24,7 @@ const About = ({ dark }) => {
                 <div className="numbers project">
                   <div className="wrapper">
                     <h3>
-                      <Counter end={15} />
+                      <Counter end={45} />
                     </h3>
                     <span className="name">
                       Completed
@@ -37,19 +37,21 @@ const About = ({ dark }) => {
             </div>
             <div className="right">
               <div className="title wow fadeInUp" data-wow-duration="1s">
-                <span>I'm a Frontend Developer</span>
-                <h3>I Build Fast, Scalable Web Experiences</h3>
+                <span>I&apos;m a Frontend Developer</span>
+                <h3>Building Accessible, High-Impact Web Apps</h3>
               </div>
               <div className="text wow fadeInUp" data-wow-duration="1s">
                 <p>
-                  Hi! I'm Jobanpreet Singh, a passionate React & Next.js developer based in Brampton, Canada. 
-                  With expertise in modern JavaScript frameworks, I specialize in creating performant, 
-                  accessible web applications. My focus is on delivering clean code, optimized UX, 
-                  and seamless integrations for startups and businesses.
+                  Hi! I&apos;m Jobanpreet Singh, a product-minded engineer based in Brampton, Canada.
+                  With 4+ years of experience, I translate complex requirements into performant React & Next.js interfaces
+                  that scale with teams and traffic. I obsess over component architecture, design systems,
+                  and Core Web Vitals to deliver experiences people love to use.
                 </p>
                 <p className="mt-3">
-                  My toolkit includes React, Next.js, TypeScript, Tailwind CSS, and Firebase. 
-                  I also have experience with WordPress customization and backend technologies like Node.js.
+                  My daily toolkit includes React, Next.js, TypeScript, Tailwind CSS, and Firebase,
+                  backed by experience in Node.js, GraphQL, and WordPress when projects call for it.
+                  Outside of client work I share UI engineering tips, mentor new developers, and build
+                  tools for the Jobfree.dev community.
                 </p>
               </div>
               <div className="dizme_tm_button wow fadeInUp" data-wow-duration="1s">
