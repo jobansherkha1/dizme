@@ -46,7 +46,12 @@ const Home = ({ dark }) => {
                       data.social &&
                       data.social.map((social, i) => (
                         <li key={i}>
-                          <a href="#">
+                          <a
+                            href={social.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={social.name}
+                          >
                             <i className={social.icon} />
                           </a>
                         </li>
@@ -59,7 +64,7 @@ const Home = ({ dark }) => {
               <div className="image">
                 <img
                   src={data && data.img ? data.img : "/img/slider/avatar.png"}
-                  alt="image"
+                  alt={`${data?.name || "Portfolio"} avatar`}
                 />
                 {data &&
                   data.skills &&

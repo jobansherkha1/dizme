@@ -7,7 +7,7 @@ const Intro = () => {
   return (
     <Fragment>
       <Head>
-        <title>Dizme | Intro</title>
+        <title>Jobanpreet Singh | Portfolio Intro</title>
       </Head>
       <PreLoader />
       <div className="dizme_tm_all_wrap" data-magic-cursor="show">

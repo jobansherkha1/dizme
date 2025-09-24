@@ -22,9 +22,14 @@ const Partners = ({ dark }) => {
                     <div className="list_inner">
                       <img
                         src={img.logo && img.logo[dark ? "dark" : "light"]}
-                        alt="image"
+                        alt="Partner logo"
                       />
-                      <a className="dizme_tm_full_link" a="" href={img.link} />
+                      <a
+                        className="dizme_tm_full_link"
+                        href={img.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      />
                     </div>
                   </li>
                 ))}

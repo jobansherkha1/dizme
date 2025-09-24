@@ -32,10 +32,10 @@ const Skills = ({ dark }) => {
                 data-align="left"
               >
                 <span>Code is Craft</span>
-                <h3>My Core Technical Skills</h3>
+                <h3>Specialties I Bring to Every Project</h3>
                 <p>
-                  I continuously refine my expertise in modern web development,
-                  focusing on performance, accessibility (WCAG), and scalable architecture.
+                  I pair strong fundamentals with a product mindset—shipping resilient,
+                  accessible interfaces that are easy to maintain and delightful to use.
                 </p>
               </div>
               <div className="dodo_progress wow fadeInUp" data-wow-duration="1s">
@@ -60,9 +60,9 @@ const Skills = ({ dark }) => {
               </div>
             </div>
             <div className="right">
-              <img 
-                src={`img/skills/${dark ? 2 : 1}.jpg`} 
-                alt="Jobanpreet Singh - React Developer Skills Visualization" 
+              <img
+                src={`img/skills/${dark ? 2 : 1}.jpg`}
+                alt="Jobanpreet Singh - Frontend Developer skills visualization"
               />
             </div>
           </div>
